@@ -1,4 +1,4 @@
-class CanidatesController < ApplicationController
+class CanidatesController < ApplicationController::API
   before_action :set_canidate, only: [:show, :edit, :update, :destroy]
 
   # GET /canidates

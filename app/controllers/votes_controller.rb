@@ -1,4 +1,4 @@
-class VotesController < ApplicationController
+class VotesController < ApplicationController::API
   before_action :set_vote, only: [:show, :edit, :update, :destroy]
 
   # GET /votes
