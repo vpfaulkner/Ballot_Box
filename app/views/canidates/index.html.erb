@@ -1,0 +1,27 @@
+<h1>Listing canidates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Party</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @canidates.each do |canidate| %>
+      <tr>
+        <td><%= canidate.name %></td>
+        <td><%= canidate.party %></td>
+        <td><%= link_to 'Show', canidate %></td>
+        <td><%= link_to 'Edit', edit_canidate_path(canidate) %></td>
+        <td><%= link_to 'Destroy', canidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Canidate', new_canidate_path %>

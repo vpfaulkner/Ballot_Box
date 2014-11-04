@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @canidate.name %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @canidate.party %>
+</p>
+
+<%= link_to 'Edit', edit_canidate_path(@canidate) %> |
+<%= link_to 'Back', canidates_path %>

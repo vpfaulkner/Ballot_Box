@@ -1,0 +1,25 @@
+<%= form_for(@canidate) do |f| %>
+  <% if @canidate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@canidate.errors.count, "error") %> prohibited this canidate from being saved:</h2>
+
+      <ul>
+      <% @canidate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :party %><br>
+    <%= f.text_field :party %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
